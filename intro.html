@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,38 +15,65 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white-100 dark:bg-black p-6">
+<body class="bg-gray-100 dark:bg-black p-6">
 
-  <div class="flex flex-col items-center justify-center space-y-6">
+  <!-- <div class="flex flex-col items-center justify-center space-y-6">
     <div class="h-16 w-16 rounded-full bg-blue-500"></div>
     <div class="h-16 w-16 rounded-full bg-orange-500"></div>
     <div class="h-16 w-16 rounded-full bg-green-500"></div>
-  </div>
+  </div> -->
 
   <div class="bg-white dark:bg-white-800 rounded-lg px-6 py-8 shadow-xl mt-5">
-    
-    <h3 class="text-gray-900 dark:text-white text-lg font-bold">
+
+    <h3 class="text-gray-900 dark:text-black text-lg font-bold">
       Dark Mode Demo
     </h3>
 
-    <p class="text-gray-500 dark:text-gray-300 mt-2">
+    <p class="text-black-500 dark:text-black-300 mt-2">
       Click the button below to switch between light and dark mode.
     </p>
 
-  <button
-  class="px-4 py-2 bg-blue-500 text-white rounded"
-  id="toggleDark">
-  Toggle Dark Mode
-</button>
+    <button class="px-4 py-2 bg-blue-500 text-white rounded" id="toggleDark">
+      Toggle Dark Mode
+    </button>
 
-<script>
-const btn = document.getElementById("toggleDark");
+    <script>
+      const btn = document.getElementById("toggleDark");
 
-btn.onclick = function () {
-    alert("clicked");
-    document.body.style.backgroundColor = "black";
-};
-</script>
+      btn.onclick = function () {
+        alert("clicked");
+        document.body.style.backgroundColor = "black";
+      };
+    </script>
 
+    <p class="p-[16px] text-[30px] text-[#973F29] bg-zinc-50">chestnut color + More styles</p>
+
+    <button class="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600
+        hover:to-blue-600 focus:outline-none focus:ring
+        focus:ring-purple-300
+        active:bg-blue-700 px-6 py-3 rounded-lg
+        text-white font-semibold
+        shadow-md transition duration-300 ease-in-out
+        transform hover: scale-105">
+      Click Me</button>
+      </div>
+
+<!-- Accent -->
+ <div class="my-4 flex flex-col text-white ml-2">
+  <label> <input type="checkbox" checked/>Browser default</label>
+  <label> <input type="checkbox" class="accent-pink-500" checked/>Customized</label>
+ </div>
+
+ <!-- Fluid Textx -->
+  <!-- <p class="sm:text-7xl text-5xl text-white">Something Nice</p> -->
+  <p class="text-[min(10vw,70px)] text-white">Something Fluid</p>
+
+  <!-- File -->
+   <label class="my-4 block">
+    <input type="file" class="block w-full text-sm text-slate-500 file:mr-4
+    file:rounded-full file:border-0 file:bg-violet-50 file:px-4 file:py-2
+    file:text-sm file:font-semibold file:text-violate-700 hover:file:bg-violate-100">
+   </label>
 </body>
+
 </html>
